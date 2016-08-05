@@ -2,7 +2,7 @@
 import os
 import sys
 
-key = "/1000/2001/"
+key = sys.argv[1] 
 
 cmd_s = "etcdctl exec-watch --recursive " + key +  " -- sh -c \"env | grep ETCD_WATCH >> modified.keys\""
 
